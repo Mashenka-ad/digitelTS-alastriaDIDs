@@ -95,7 +95,7 @@ async function main() {
   const signedPreparedTransaction = await adminIdentity.getKnownTransaction(
     prepareResult
   )
-  const signedCreateTransaction = await entityIssuerIdentity.getKnownTransaction(
+  const signedCreateTransaction = await entityProviderIdentity.getKnownTransaction(
     createResult
   )
   web3.eth
@@ -124,7 +124,7 @@ async function main() {
               console.log(
                 `alastriaProxyAddress: 0x${AlastriaIdentity.slice(26)}`
               )
-              configData.entityIssuer = `0x${AlastriaIdentity.slice(26)}`
+              configData.entityProvider = `0x${AlastriaIdentity.slice(26)}`
               fs.writeFileSync(
                 '../configuration.json',
                 JSON.stringify(configData)
