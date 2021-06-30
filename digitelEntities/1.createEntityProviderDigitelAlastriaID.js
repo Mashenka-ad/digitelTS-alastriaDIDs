@@ -95,7 +95,7 @@ async function main() {
   const signedPreparedTransaction = await adminIdentity.getKnownTransaction(
     prepareResult
   )
-  const signedCreateTransaction = await entityIssuerIdentity.getKnownTransaction(
+  const signedCreateTransaction = await entityProviderIdentity.getKnownTransaction(
     createResult
   )
   web3.eth
